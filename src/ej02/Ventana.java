@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ut1.pkg1;
+package ej02;
 
 import java.awt.Dimension;
 import javax.swing.JFrame;
@@ -16,6 +16,7 @@ public class Ventana extends JFrame {
     
     public Ventana() {
         setSize(new Dimension(640,480));
+        setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
