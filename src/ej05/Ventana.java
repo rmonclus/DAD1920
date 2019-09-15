@@ -29,6 +29,11 @@ public class Ventana extends JFrame {
     JTextField campoTexto = new JTextField(10);
 
     public Ventana() {
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.5");
         setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);

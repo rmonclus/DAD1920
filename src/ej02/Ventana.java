@@ -13,12 +13,17 @@ import javax.swing.JFrame;
  * @author rubisco
  */
 public class Ventana extends JFrame {
-    
+
     public Ventana() {
-        setSize(new Dimension(640,480));
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.2");
+        setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
-    
+
 }

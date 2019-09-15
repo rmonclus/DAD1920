@@ -7,7 +7,6 @@ package ej08;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -35,6 +34,11 @@ public class Ventana extends JFrame {
     JTextField campoTexto = new JTextField(10);
 
     public Ventana() {
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.8");
         setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);

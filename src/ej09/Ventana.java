@@ -7,7 +7,6 @@ package ej09;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -17,7 +16,6 @@ import java.awt.event.WindowListener;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -38,6 +36,11 @@ public class Ventana extends JFrame {
     JTextField campoTexto = new JTextField(10);
 
     public Ventana() {
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.9");
         setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -52,20 +55,20 @@ public class Ventana extends JFrame {
         centro.add(boton);
         JRadioButton habilita = new JRadioButton("Habilitar");
         JRadioButton deshabilita = new JRadioButton("Deshabilitar");
-        
+
         ButtonGroup grupo = new ButtonGroup();
-        
+
         grupo.add(habilita);
         grupo.add(deshabilita);
-        
+
         habilita.setSelected(true);
 
         JPanel abajo = new JPanel();
         abajo.setLayout(new BoxLayout(abajo, BoxLayout.Y_AXIS));
-        
+
         abajo.add(habilita);
         abajo.add(deshabilita);
-        
+
         primeraPestaña.add(abajo, BorderLayout.SOUTH);
 
         primeraPestaña.add(centro);
@@ -84,7 +87,7 @@ public class Ventana extends JFrame {
 
             }
         });
-        
+
         deshabilita.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -92,9 +95,6 @@ public class Ventana extends JFrame {
 
             }
         });
-        
-   
-        
 
         add(tabbed);
 

@@ -19,13 +19,18 @@ import javax.swing.JTextField;
  * @author rubisco
  */
 public class Ventana extends JFrame {
-    
+
     JLabel etiqueta = new JLabel("Una etiqueta");
     JButton boton = new JButton("Un botón");
     JTextField campoTexto = new JTextField(10);
-    
+
     public Ventana() {
-        setSize(new Dimension(640,480));
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.3");
+        setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
@@ -36,10 +41,10 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 etiqueta.setText(campoTexto.getText());
-                
+
             }
         });
         setVisible(true);
     }
-    
+
 }

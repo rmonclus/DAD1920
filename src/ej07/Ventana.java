@@ -7,7 +7,6 @@ package ej07;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -32,6 +31,11 @@ public class Ventana extends JFrame {
     JTextField campoTexto = new JTextField(10);
 
     public Ventana() {
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.7");
         setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -45,18 +49,16 @@ public class Ventana extends JFrame {
         JPanel centro = new JPanel();
         centro.add(boton);
         primeraPestaña.add(centro);
-        
-        
-        
+
         JPanel segundaPestaña = new JPanel();
-        
+
         segundaPestaña.add(etiqueta);
-        
+
         tabbed.add(primeraPestaña, "Datos");
         tabbed.add(segundaPestaña, "Resultado");
-        
+
         add(tabbed);
-        
+
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

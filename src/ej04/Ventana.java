@@ -22,13 +22,18 @@ import javax.swing.JTextField;
  * @author rubisco
  */
 public class Ventana extends JFrame {
-    
+
     JLabel etiqueta = new JLabel("Una etiqueta");
     JButton boton = new JButton("Un botón");
     JTextField campoTexto = new JTextField(10);
-    
+
     public Ventana() {
-        setSize(new Dimension(640,480));
+        init();
+    }
+
+    private void init() {
+        setTitle("DAD - Ejemplo ejercicio 1.4");
+        setSize(new Dimension(640, 480));
         setResizable(false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         setLayout(new FlowLayout());
@@ -38,7 +43,7 @@ public class Ventana extends JFrame {
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                etiqueta.setText(campoTexto.getText());                
+                etiqueta.setText(campoTexto.getText());
             }
         });
         addWindowListener(new WindowListener() {
@@ -50,8 +55,9 @@ public class Ventana extends JFrame {
             @Override
             public void windowClosing(WindowEvent e) {
                 int opcion = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea cerrar el programa?", "Cerrar el programa", JOptionPane.YES_NO_OPTION);
-                if (opcion == 0)
+                if (opcion == 0) {
                     System.exit(0);
+                }
             }
 
             @Override
@@ -80,6 +86,5 @@ public class Ventana extends JFrame {
         });
         setVisible(true);
     }
-    
 
 }

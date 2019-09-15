@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ej10;
+package ej08;
 
 /**
  *
  * @author rubisco
  */
-public class UT11 {
+public class ej08 {
 
     /**
      * @param args the command line arguments
